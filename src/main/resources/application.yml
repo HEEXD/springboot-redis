@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   # DB Configuration
@@ -18,6 +18,6 @@ spring:
 
 # mybatis
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:mapper/**/*.xml
   check-config-location: true
 
