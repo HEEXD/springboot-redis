@@ -1,6 +1,8 @@
 package com.hxd.springbootredis;
 
+import com.alibaba.fastjson.JSONObject;
 import com.hxd.springbootredis.common.utils.RedisUtil;
+import com.hxd.springbootredis.modules.user.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,12 +19,8 @@ public class SpringbootRedisApplicationTests {
 
     @Test
     public void testRedis() {
-        //redisUtil.set("hxd", "123");
-        //redisUtil.set("user", JSONObject.toJSONString(User.builder().id("3").username("hxd").age("12").build()));
-        /*System.out.println(redisUtil.get("user"));
-        String user = redisUtil.get("user").toString();
-        User u = JSONObject.parseObject(user, User.class);
-        System.out.println(u);*/
-        redisUtil.set("time","test",10);
+        redisUtil.set("hxd", "123");
+        redisUtil.set("user", JSONObject.toJSONString(User.builder().id("4").username("hxd").age("12").build()));
+
     }
 }
