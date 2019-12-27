@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style type="text/css">
+    table.myTable {
+        font-family: verdana,arial,sans-serif;
+        font-size:11px;
+        color:#333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+        text-align:center;
+        margin:0 auto;
+        width: 300px;
+    }
+    table.myTable th {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+    }
+    table.myTable td {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+    }
+
+</style>
+<body>
+
+<table class="myTable">
+    <tr>
+        <th>key</th>
+        <th>value</th>
+    </tr>
+    <tr th:each="map:${list}">
+        <td th:text="${map.key}"></td>
+        <td th:text="${map.value}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  # DB Configuration
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.142:3307/test
+    username: root
+    password: 123456
+
+  # redis
+  redis:
+    host: 192.168.1.142
+    database: 0
+    port: 6379
+    timeout: 1000
+
+# mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  check-config-location: true
+
