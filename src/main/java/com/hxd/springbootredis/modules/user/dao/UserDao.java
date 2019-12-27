@@ -1,7 +1,5 @@
 package com.hxd.springbootredis.modules.user.dao;
 
-
-
 import com.hxd.springbootredis.modules.user.entity.User;
 
 import java.util.List;
