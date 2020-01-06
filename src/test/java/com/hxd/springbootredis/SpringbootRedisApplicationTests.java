@@ -35,8 +35,10 @@ public class SpringbootRedisApplicationTests {
         //redisUtil.del("myjob");
         //System.out.println(redisUtil.hHasKey("user", "username"));
 
+        // set不能存储相同元素，list可以存储相同元素
         //System.out.println(redisUtil.sSet("myset", "string", JSONObject.toJSONString(User.builder().id("4").username("hxd").age("12").build())));
         //System.out.println(redisUtil.sGet("myset"));
+        //System.out.println(redisUtil.sSet("myset","str","str1"));
         //System.out.println(redisUtil.sHasKey("myset",JSONObject.toJSONString(User.builder().id("4").username("hxd").age("12").build())));
         //System.out.println(redisUtil.sGetSetSize("myset"));
         //System.out.println(redisUtil.setRemove("myset","string"));
@@ -47,6 +49,8 @@ public class SpringbootRedisApplicationTests {
         list.add("str");
         list.add(JSONObject.toJSONString(User.builder().username("hxd").age("19").build()));
         System.out.println(redisUtil.lSet("mylist2",list));*/
-        System.out.println(redisUtil.lGet("mylist",0,1));
+        //System.out.println(redisUtil.lGet("mylist",0,1));
+        //System.out.println(redisUtil.lUpdateIndex("mylist",0,"helloworld"));
+        //System.out.println(redisUtil.lRemove("mylist",2,"string"));
     }
 }
